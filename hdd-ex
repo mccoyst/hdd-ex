@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$1" = init ]; then
+	dd if=/dev/zero of=$HOME/emergency bs=1m count=10000
+elif [ "$1" = ineedmorespace ]; then
+	rm $HOME/emergency
+fi
